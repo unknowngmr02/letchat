@@ -50,6 +50,7 @@ button:hover {
 
 /* 💬 Chat Container */
 .chat-container {
+    height: 100vh;
     max-width: 500px;
     margin: 50px auto;
     background: rgba(255, 255, 255, 0.4);

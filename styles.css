@@ -172,6 +172,7 @@ button:hover {
     font-weight: bold;
     transition: background 0.3s ease, transform 0.2s;
     font-size: 1rem;
+    width: 100px;
 }
 
 .input-container button:hover {
@@ -211,39 +212,10 @@ button:hover {
         font-size: 14px;
     }
 
-    .input-container {
-        flex-direction: row;
-        gap: 5px;
-    }
-
-    .input-container input {
-        padding: 10px;
-        font-size: 14px;
-    }
-
-    .input-container button {
-        padding: 10px;
-        font-size: 14px;
-    }
 }
 
 @media screen and (max-width: 480px) {
     .chat-container {
         height: 90vh;
-    }
-
-    .input-container {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .input-container input {
-        width: 100%;
-        font-size: 14px;
-    }
-
-    .input-container button {
-        width: 100%;
-        font-size: 14px;
     }
 }

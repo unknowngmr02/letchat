@@ -7,20 +7,24 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* 🏠 Container for Forms */
 .container {
+    width: 90%;
     max-width: 400px;
     background: rgba(255, 255, 255, 0.3);
     padding: 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 /* 📝 Input Fields */
 input {
-    width: 90%;
+    width: 100%;
     padding: 12px;
     border-radius: 8px;
     border: 1px solid #ff758c;
@@ -31,6 +35,7 @@ input {
 
 /* 🎯 Buttons */
 button {
+    width: 100%;
     padding: 12px;
     background: #ff6b81;
     color: white;
@@ -48,33 +53,39 @@ button:hover {
 
 /* 💬 Chat Container */
 .chat-container {
+    width: 95%;
     max-width: 500px;
     background: rgba(255, 255, 255, 0.4);
     border-radius: 12px;
     text-align: left;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     margin: 10px auto;
-    border-radius: 8px;
-    padding: 5px;
+    padding: 10px;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.chat-container h2{
+.chat-container h2 {
     background-color: #ff4757;
-    margin: 0%;
+    margin: 0;
     height: 3rem;
     display: flex;
     align-items: center;
     padding: 5px;
     color: #2b1317;
-   border-radius: 8px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2rem;
 }
 
 /* 📨 Chat Messages */
 #messages {
     list-style: none;
     padding: 0;
-    margin: 20px 0;
-    max-height: 350px;
+    margin: 0;
+    max-height: 60vh;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
@@ -94,7 +105,7 @@ button:hover {
 /* 🎭 Message Alignment */
 .message-container {
     display: flex;
-    justify-content: flex-start; /* Default: Align messages to the left */
+    justify-content: flex-start;
     padding: 5px;
 }
 
@@ -125,7 +136,7 @@ button:hover {
 /* ❤️ Your Messages (Stand Out) */
 .self-message .message-bubble {
     background: linear-gradient(135deg, #ff6b81, #ff758c);
-    color: rgb(147, 147, 147);
+    color: white;
     text-align: right;
     font-weight: bold;
     box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.15);
@@ -136,8 +147,10 @@ button:hover {
     display: flex;
     gap: 10px;
     align-items: center;
+    width: 100%;
 }
 
+/* Responsive Input Box */
 .input-container input {
     flex: 1;
     padding: 12px;
@@ -146,6 +159,7 @@ button:hover {
     outline: none;
     background: rgba(255, 255, 255, 0.8);
     color: #333;
+    font-size: 1rem;
 }
 
 /* 🚀 Send Button */
@@ -156,9 +170,79 @@ button:hover {
     cursor: pointer;
     font-weight: bold;
     transition: background 0.3s ease, transform 0.2s;
+    font-size: 1rem;
 }
 
 .input-container button:hover {
     background: #e63950;
     transform: scale(1.05);
+}
+
+/* 📱 Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+        height: auto;
+    }
+
+    .chat-container {
+        width: 100%;
+        max-width: 100%;
+        height: 85vh;
+        margin: 0;
+        padding: 10px;
+        border-radius: 0;
+    }
+
+    .chat-container h2 {
+        font-size: 1rem;
+        padding: 8px;
+        height: auto;
+    }
+
+    #messages {
+        max-height: 65vh;
+        font-size: 14px;
+    }
+
+    .message-bubble {
+        max-width: 80%;
+        font-size: 14px;
+    }
+
+    .input-container {
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .input-container input {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .input-container button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .chat-container {
+        height: 90vh;
+    }
+
+    .input-container {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .input-container input {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .input-container button {
+        width: 100%;
+        font-size: 14px;
+    }
 }

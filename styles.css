@@ -97,10 +97,10 @@ button:hover {
 #messages li {
     width: fit-content;
     padding: 12px;
-    background: rgba(255, 255, 255, 0.3);
     margin: 5px;
     border-radius: 10px;
     font-size: 14px;
+    background-color: #ffbcbc;
 }
 
 /* 🎭 Message Alignment */

@@ -7,15 +7,14 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
+    align-content: center;
 }
 
 /* 🏠 Container for Forms */
 .container {
     max-width: 400px;
-    margin: 100px auto;
     background: rgba(255, 255, 255, 0.3);
     padding: 20px;
-    border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -23,7 +22,6 @@ body {
 input {
     width: 90%;
     padding: 12px;
-    margin: 10px 0;
     border-radius: 8px;
     border: 1px solid #ff758c;
     outline: none;
@@ -50,14 +48,25 @@ button:hover {
 
 /* 💬 Chat Container */
 .chat-container {
-    height: 100vh;
     max-width: 500px;
-    margin: 50px auto;
     background: rgba(255, 255, 255, 0.4);
-    padding: 20px;
     border-radius: 12px;
     text-align: left;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 10px auto;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.chat-container h2{
+    background-color: #ff4757;
+    margin: 0%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    color: #2b1317;
+   border-radius: 8px;
 }
 
 /* 📨 Chat Messages */
